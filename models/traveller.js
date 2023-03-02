@@ -46,6 +46,9 @@ Traveller.prototype.getUniqueModesOfTransport = function () {
 // .filter(journey, index, self) = journey = 'train' index = 0, self refers to array filter is called on (so new array created of just the transports) 
 // self.indexOf(journey) === index - if condition is true, it will be added to new array of unique transport values, so if there is a duplicate and value does not match the index then it will be false and not added to new array
 
-
+// another way of doing this 
+// Traveller.prototype.getUniqueModesOfTransport = function () {
+//   return [...new Set(this.journeys.map((uniqueModesOfTransport) => uniqueModesOfTransport.transport))]
+// };
 
 module.exports = Traveller;
